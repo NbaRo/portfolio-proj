@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="../../../../favicon.ico">
 
   <title>Neacsu Alexandru`s Blog</title>
 
@@ -45,7 +44,7 @@
      <h2>Latest project:</h2>
      <hr />
      {% for blog in blogs.all %}
-     <a href=""><h3>{{ blog.title }}</h3></a>
+     <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
      {{ blog.pub_date_pretty }}
      <br />
      <img src="{{ blog.image.url }}" height=100 widht=100/>
